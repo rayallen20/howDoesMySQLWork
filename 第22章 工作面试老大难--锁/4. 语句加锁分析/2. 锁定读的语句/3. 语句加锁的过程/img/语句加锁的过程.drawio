@@ -1,0 +1,146 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="第 1 页" id="BXXJoDnnRVKuN-Q05CnV">
+    <mxGraphModel dx="2185" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-1" value="语句加锁的过程" style="rounded=1;whiteSpace=wrap;html=1;fontSize=50;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80.00999999999999" width="650" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-2" target="pgQKC1OyM3oiloIYGVT3-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-2" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;步骤1. 在B+树叶子节点中定位到该扫描区间中的第1条记录,把该记录作为当前记录&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="40" y="240" width="730" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="pgQKC1OyM3oiloIYGVT3-5" target="pgQKC1OyM3oiloIYGVT3-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-5" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;步骤2. 为当前记录加锁&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="301.88" y="370" width="206.25" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-9" target="pgQKC1OyM3oiloIYGVT3-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-13" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;不符合查询语句中关于该二级索引的条件&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pgQKC1OyM3oiloIYGVT3-12" vertex="1" connectable="0">
+          <mxGeometry x="-0.2748" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-9" target="pgQKC1OyM3oiloIYGVT3-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-17" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;符合查询语句中关于该二级索引的条件&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pgQKC1OyM3oiloIYGVT3-16" vertex="1" connectable="0">
+          <mxGeometry x="-0.1111" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" edge="1" parent="1" source="pgQKC1OyM3oiloIYGVT3-9" target="HY3MLUYKESceWD6hTR8W-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-9" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;步骤3. 判断索引条件下推的条件是否成立&lt;/b&gt;&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="285" y="535" width="240" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-5" target="pgQKC1OyM3oiloIYGVT3-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-11" target="pgQKC1OyM3oiloIYGVT3-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-11" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;获取到当前记录所在单向链表的下一条记录,将该记录作为新的当前记录&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="610" y="490" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="pgQKC1OyM3oiloIYGVT3-15" target="pgQKC1OyM3oiloIYGVT3-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-15" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;步骤4. 执行回表操作&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="310.94" y="910" width="188.12" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-18" target="HY3MLUYKESceWD6hTR8W-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="404.9949999999999" y="1460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-25" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;符合边界条件&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pgQKC1OyM3oiloIYGVT3-24" vertex="1" connectable="0">
+          <mxGeometry x="-0.0111" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-18" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;步骤5. 判断边界条件是否成立&lt;/b&gt;&lt;/span&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="285.01" y="1040" width="240" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-15" target="pgQKC1OyM3oiloIYGVT3-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-20" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;向server层返回一个&quot;查询完毕&quot;的信息&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="230" y="1960" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-27" target="pgQKC1OyM3oiloIYGVT3-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-480" y="1865" />
+              <mxPoint x="-480" y="378" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-27" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;步骤7. 获取当前记录所在单向链表的下一条记录,并将其作为新的当前记录&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="75.01" y="1850" width="660" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-32" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;在隔离级别不大于READ COMMITTED(即隔离级别为READ UNCOMMITEED或READ COMMITTED)时,会为当前记录加LOCK_REC_NOT_GAP锁&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;在隔离级别不小于REPEATABLE READ(即隔离级别为REPEATABLE READ或SERIALIZABLE)时,会为当前记录加next-key锁&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="260" width="600" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-34" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;若读取的是二级索引记录,则需要进行回表操作,获取到对应的聚簇索引记录并给该聚簇索引记录加LOCK_REC_NOT_GAP锁&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="902.5" width="600" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-36" target="pgQKC1OyM3oiloIYGVT3-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-36" value="&lt;div&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;在隔离级别不大于READ COMMITED时(即隔离级别为READ UNCOMMITEED或READ COMMITTED),就释放掉加在该记录上的锁&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;在隔离级别不小于REPEATABLEREAD时(即隔离级别为REPEATABLE READ或SERIALIZABLE),则不释放加在该记录上的锁&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1220" y="1370" width="730" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.51;entryY=0.036;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pgQKC1OyM3oiloIYGVT3-18" target="pgQKC1OyM3oiloIYGVT3-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgQKC1OyM3oiloIYGVT3-38" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;不符合边界条件&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pgQKC1OyM3oiloIYGVT3-37" vertex="1" connectable="0">
+          <mxGeometry x="-0.3056" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HY3MLUYKESceWD6hTR8W-1" target="HY3MLUYKESceWD6hTR8W-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-7" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;成立&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HY3MLUYKESceWD6hTR8W-5">
+          <mxGeometry x="-0.1622" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HY3MLUYKESceWD6hTR8W-1" target="HY3MLUYKESceWD6hTR8W-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-10" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;不成立&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HY3MLUYKESceWD6hTR8W-9">
+          <mxGeometry x="-0.1309" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-1" value="&lt;b style=&quot;font-size: 20px; text-align: left;&quot;&gt;步骤6. server层判断其余搜索条件是否成立&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="285" y="1410" width="240" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="HY3MLUYKESceWD6hTR8W-2" target="pgQKC1OyM3oiloIYGVT3-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-2" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;将该记录发送到客户端(注意这里并没有释放锁)&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="185.46999999999997" y="1724" width="439.05" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="HY3MLUYKESceWD6hTR8W-8" target="pgQKC1OyM3oiloIYGVT3-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-8" value="&lt;div&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;在隔离级别不大于READ COMMITED时(即隔离级别为READ UNCOMMITEED或READ COMMITTED),就释放掉加在该记录上的锁&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;在隔离级别不小于REPEATABLEREAD时(即隔离级别为REPEATABLE READ或SERIALIZABLE),则不释放加在该记录上的锁&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1684" width="730" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="HY3MLUYKESceWD6hTR8W-12" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;div&gt;另外,这一步还会判断当前记录是否符合形成扫描区间的边界条件.若不符合,则跳过步骤4和步骤5,直接向server层返回一个&quot;查询完毕&quot;的信息&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;简单理解就是: 当前记录是否超出扫描区间的范围,若已经超出,则不需要继续扫描下去了,说明查询结束了&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=15;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-430" y="605" width="600" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
